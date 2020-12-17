@@ -1,0 +1,74 @@
+:root {
+  --primary:#5EAE27;
+  --secundary:#666568; 
+
+  --enfasis1:#00838f; 
+  --enfasis2:#006064; 
+  --enfasis3:#00e676; 
+
+  --light1:#e8f5e9;
+  --light2:#c8e6c9; 
+  --light3:#a5d6a7; 
+  
+  --dark1:#1c2331;
+  --dark2:#212121;
+  --dark3:#263238;
+  --dark4:#6a6a6a;
+
+  --formInvalid:#e57373;
+  --formValid:#e8f0fe;
+  --textLink:#2196f3;
+  --alternative1:#e53935; 
+}
+
+/*background*/
+.bg-primary{background: var(--primary) !important;}
+.bg-secundary{background: var(--secundary) !important;}
+.bg-enfasis1{background: var(--enfasis1) !important;}
+.bg-enfasis2{background: var(--enfasis2) !important;}
+.bg-enfasis3{background: var(--enfasis3) !important;}
+.bg-light1{background: var(--light1) !important;}
+.bg-light2{background: var(--light2) !important;}
+.bg-light3{background: var(--light3) !important;}
+.bg-dark1{background: var(--dark1) !important;}
+.bg-dark2{background: var(--dark2) !important;}
+.bg-dark3{background: var(--dark3) !important;}
+.bg-dark4{background: var(--dark4) !important;}
+
+.bg-gradiente {
+    background: linear-gradient(to right, var(--enfasis1), var(--enfasis2), var(--enfasis3));
+    opacity: 0.8;
+}
+
+.bg-formValid{background: var(--formValid) !important;}
+.bg-formInvalid{background: var(--formInvalid) !important;}
+.bg-textLink{background: var(--textLink) !important;}
+.bg-alternative1{background: var(--alternative1) !important;}
+
+/*text color*/
+.font-primary{color: var(--primary) !important;}
+.font-secundary{color: var(--secundary) !important;}
+.font-enfasis1{color: var(--enfasis1) !important;}
+.font-enfasis2{color: var(--enfasis2) !important;}
+.font-enfasis3{color: var(--enfasis3) !important;}
+.font-light1{color: var(--light1) !important;}
+.font-light2{color: var(--light2) !important;}
+.font-light3{color: var(--light3) !important;}
+.font-dark1{color: var(--dark1) !important;}
+.font-dark2{color: var(--dark2) !important;}
+.font-dark3{color: var(--dark3) !important;}
+.font-dark4{color: var(--dark4) !important;}
+
+.text-formValid{color: var(--formValid) !important;}
+.text-formInvalid{color: var(--formInvalid) !important;}
+.text-textLink{color: var(--textLink) !important;}
+.text-alternative1{color: var(--alternative1) !important;}
+
+/*button text color*/
+.btn.bg-primary, .btn.bg-secundary{color: white !important;}
+
+/*button background hover*/
+.btn.bg-primary:hover{background: var(--secundary) !important;}
+.btn.bg-secundary:hover{background: var(--principal) !important;}
+.btn.bg-enfasis1:hover{background: var(--enfasis2) !important;}
+.btn.bg-enfasis2:hover{background: var(--enfasis1)!important;}
