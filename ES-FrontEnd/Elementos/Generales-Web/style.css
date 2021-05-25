@@ -1,0 +1,486 @@
+/*=============================================
+  GENERAL STYLE
+=============================================*/
+html, body{
+    overflow-x: hidden;
+    scrollbar-face-color: var(--primary);
+    scrollbar-track-color:#F5F5F5;
+    scrollbar-shadow-color:rgba(0,0,0,0.1);
+    scrollbar-highlight-color: var(--primary);
+}
+p{cursor: context-menu;}
+b{font-weight: bold;}
+
+/*barra desplazamiento style*/
+::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+::-webkit-scrollbar{
+    background-color: #F5F5F5; 
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 94%,
+									   from(var(--light3)),
+									   to(var(--primary)))
+}
+
+/*iconos flotantes style*/
+.wsp{
+    background: #25d366; 
+    border-radius:50%;
+    color: white;
+    position: fixed;
+    bottom: 11%;
+    right: 1%;
+    vertical-align: middle;
+}
+.wsp:hover{
+    animation: bounceWSP .5s infinite;
+    transition: .5s;
+    color: white;
+    border-radius: 5%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.fb-msg{
+    background: #0084ff; 
+    border-radius:50%;
+    color: white;
+    position: fixed;
+    bottom: 21%;
+    right: 1%;
+    vertical-align: middle;
+}
+.fb-msg:hover{
+    animation: bounceFB .5s infinite;
+    transition: .5s;
+    color: white;
+    border-radius: 5%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.wsp:hover i, .fb-msg:hover i{
+    padding-right: .5rem;
+}
+.wsp:hover::after, .fb-msg:hover::after{
+    content: "¿Tienes alguna duda?";
+    transition: 1s;
+}
+
+.to-top{
+    background: var(--dark2); 
+    color: white;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    vertical-align: middle;
+}
+.to-top:hover{color: white; background: var(--primary)}
+
+/* animaciones de iconos flotantes */
+@keyframes bounceWSP { 
+  from { 
+    bottom: 11%;
+  } 
+  to { 
+    bottom: 12%;
+  } 
+}
+@keyframes bounceFB { 
+  from { 
+    bottom: 21%;
+  } 
+  to { 
+    bottom: 22%;
+  } 
+}
+
+/*menu style*/
+.navbar{
+    background: transparent;
+    padding: 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+.navbar .navbar-brand{
+    color: var(--primary) !important;
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin-left: 30px;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 0 0 5px black;
+}
+.navbar .nav-link{ 
+    color: white !important; 
+    font-weight: 700;
+    text-shadow: 0 0 5px yellow, 0 0 10px var(--primary);
+}
+.navbar .nav-item:hover{
+    background: var(--primary) !important;
+    transition: 0.3s;
+}
+.navbar .rs a{
+    color: white;
+    margin-right: 50px;
+    margin-bottom: 3%;
+    cursor: context-menu;
+}
+.navbar .rs a span{
+    background: var(--primary); 
+    width:25px; 
+    height:25px;
+}
+.navbar .rs a:hover{ color: white; }
+.navbar .activeNav{background: var(--primary);}
+
+/*menu scrolling style*/
+.scrolling-navbar { transition: background .5s ease-in-out, padding .5s ease-in-out; }
+.top-nav-collapse { background-color: rgba(1,1,1,0.9);}
+.top-nav-collapse  .navbar-brand{ color: white !important; }
+.top-nav-collapse  .navbar-brand img{ max-width: 60px; transition: 1s}
+.top-nav-collapse  .nav-link{ text-shadow: none;}
+
+/*footer style*/
+.footer h4, .footer h6{
+    color: var(--primary);
+    font-weight: 600; 
+    margin-top: 10px;
+    cursor:context-menu;
+}
+.footer p, .footer a{
+    color: #7d7d7d;
+    cursor:context-menu;
+}
+
+/*copyright style*/
+.footer-bottom{
+	text-align:center;
+    background: var(--dark2);
+}
+.footer-bottom p{
+	font-size:15px;
+    font-weight: 700;
+	color: white;
+    cursor:context-menu;
+    margin: 0;
+}
+
+/*===BOTON PRINCIPAL STYLE ===*/
+.botonPrincipal{
+    border-radius: 30px; 
+    font-weight: bold;
+    background: var(--primary);
+    padding: 10px 50px;
+}
+.botonPrincipal:hover, .botonPrincipal:focus, .botonPrincipal:hover:focus{
+    background: var(--secundary) !important;
+    transition: 30s;
+}
+		
+/*===BOTON SECUNDARIO STYLE ===*/
+.botonSecundario{
+	border: 2.4px var(--colorTextBotonSecundario) solid;
+	border-radius: 50px;
+	padding: 5px 20px;
+	font-weight: bold;
+	color: var(--colorTextBotonSecundario);
+	font-size: 12px;
+}
+.botonSecundario:hover, .botonSecundario:focus, .botonSecundario:hover:focus{
+	background-color: var(--colorTextBotonSecundario);
+	color: white;
+	transition: 0.5s;
+}
+
+/*===BOTON TERCERO STYLE ===*/
+.botonTercero{
+	border-radius: 50px;
+	padding: 5px 20px;
+	font-weight: bold;
+    background: var(--primary);
+	font-size: 12px;
+    color: white;
+}
+.botonTercero:hover, .botonTercero:focus, .botonTercero:hover:focus{
+	background: var(--secundary) !important;
+    color: white;
+	transition: 0.5s;
+}
+
+/*===BOTON QUINTO STYLE ===*/
+.botonCuarto{
+    border: 4px var(--primary) solid;
+	padding: 8px 50px;
+    border-radius: 30px; 
+	font-weight: bold;
+	font-size: 12px;
+    color: white;
+}
+.botonCuarto:hover, .botonCuarto:focus, .botonCuarto:hover:focus{
+	background: var(--primary) !important;
+    color: white;
+	transition: 0.5s;
+}
+
+/*=============================================
+  INDEX
+=============================================*/
+
+/*carousel style*/
+#CarouselInicio .carousel-item{
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 100vh;
+}
+#CarouselInicio .carousel-control-prev i, #CarouselInicio .carousel-control-next i{
+    padding: 10px;
+    background: rgba(1, 1, 1, 0.9);
+}
+.descripcionSlider{
+    margin-top: 30vh !important;
+    margin-left: 15%;
+}
+.descripcionSlider p{
+    width: fit-content;
+    max-width: 450px;
+    background: rgba(1,1,1,0.7) !important;
+    color: var(--primary);
+    padding: 0 0.9rem;
+    margin-bottom: 0.3rem !important;
+    font-weight: bold;
+    font-family:serif;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px black;
+    font-family: 'Bungee', cursive;
+    border-radius: 2px;
+}
+.descripcionSlider p.descripcion{
+    color: white;
+    max-width: 400px;
+    margin-bottom: 0.3rem !important;
+    text-transform: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: serif;
+}
+.carousel-control-next, .carousel-control-prev {
+    background: var(--primary) !important;
+    width: 3% !important;
+    height: 20%;
+    margin: auto;
+}
+
+/*destacados style*/
+.product-ofertas{background: var(--light1);}
+
+
+
+#carouselCategorias .view{
+  width: 100%;
+}
+
+/*=============================================
+  NOSOTROS
+=============================================*/
+
+/*mision style*/
+.mision {
+    background: black !important;
+    color: var(--primary);
+    padding: 3rem 6rem;
+}
+.mision hr{ background: var(--primary); }
+
+/*vision style*/
+.vision {
+    background: var(--primary) !important;
+    color: #222 !important;
+    padding: 3rem 6rem;
+}
+.vision hr{ background: #222; }
+
+/*mision-vision style*/
+.mision h1, .vision h1{
+    margin: 0.7rem 0.5rem 0.3rem 0;
+    font-weight: bold;
+}
+.mision hr, .vision hr{
+    height: 5px;
+    width: 55px;
+    border-radius: 15px;
+    margin: 0 0 1rem;
+}
+
+/*=============================================
+PRODUCTOS    (PRODUCTOS)
+=============================================*/
+
+/*categorias lista style*/
+#categorias ul{
+	margin-left: -1%;
+}
+#categorias ul li{
+    max-width: 110px;
+	height: 70px;
+    background: var(--dark2);
+    color: white;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+#categorias ul p{
+    font-size: .8rem;
+	font-weight: 900;
+	font-family: monospace;
+    margin: 0;
+    display: none;
+}
+#categorias li:hover img, #categorias li.active img{
+    display: none;
+}
+#categorias li:hover p, #categorias li.active p{
+    display: block;
+}
+#categorias li:hover, #categorias li.active{
+    background: var(--primary);
+    color: white;  
+	transform: scale(1.3);
+	z-index: 1000;
+	animation: hover .3s ease-out 1;
+}
+@keyframes hover { 
+  from { 
+    background: var(--dark2);
+	transform: scale(1);
+  } 
+  to { 
+    background: var(--primary);
+	transform: scale(1.3);
+  } 
+}
+
+/*filtros style*/
+.filtros .list-group{
+    max-height: 230px;
+    overflow-y: auto;
+}
+.filtros .list-group-item{
+    color: var(--dark4);
+    background: transparent;
+    border: none;
+    padding: 0.3rem 0rem;
+}
+.filtros .custom-control-label::before, #categorias .custom-control-label::after, .filtros .custom-checkbox .custom-control-input:checked~.custom-control-label::after, .filtros .custom-radio .custom-control-input:checked~.custom-control-label::after{
+    width: 1.3rem !important;
+    height: 1.3rem !important;
+}
+.filtros .custom-control-input:checked~.custom-control-label::before{
+    color: #fff;
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
+
+/*filtros aplicados style*/
+.filtrosAplicados .chip{
+  color: grey;
+  font-size: .9rem;
+}
+.filtrosAplicados .chip i{
+  font-size: 1.2rem;
+}
+
+.mostrar{
+    display: block !important;
+    position: fixed;
+    top: 50px !important;
+    left: 0;
+    z-index: 10;
+    width: 60%;
+    overflow-y: auto;
+}
+
+/*paginacion style*/
+#PAGINACION ul{ margin: 0; }
+#PAGINACION ul li{ padding: 0 1rem;}
+#PAGINACION ul li a{
+    font-size: 1.5rem;
+    color: #222;
+}
+#PAGINACION .activePage { background: var(--secundary); }
+#PAGINACION .activePage a{ color: white; }
+#PAGINACION .activePage:hover { background: var(--primary); }
+
+/*=============================================
+DETALLE PRODUCTO    (PRODUCTOS)
+=============================================*/
+
+#content .titulo, #DESTACADOS .titulo, #productosRelacionados .titulo, #productosRelacionadosCelular .titulo{
+    height: 39px;
+    font-size: 0.8rem;
+    font-weight: 600 !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    align-items: center;
+}
+
+#content img, #DESTACADOS .DESTACADO1 img, #DESTACADOS .DESTACADO3 img, #productosRelacionados img, #productosRelacionadosCelular img{
+    cursor:pointer; 
+    height:30vh; 
+}
+
+#myTab a.active,#myTab a:hover{background: var(--primary) !important; color: white !important;}
+
+/*=============================================
+MEDIA RESPONSIVE
+=============================================*/
+@media (max-width: 768px) { 
+
+    /*menu style*/
+    .navbar{background-color: rgba(1,1,1,0.9);}
+    .navbar .navbar-brand{
+        color: white !important; 
+        font-size: 1.4rem;
+        margin-left: 10px;
+    }
+    .navbar .navbar-brand img{ 
+        max-width: 40px; 
+        transition: 1s; 
+        margin-right: 8px;
+    }
+    .navbar .navbar-collapse{
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+    }
+    .navbar .rs a{
+        margin-top: 3%;
+    }
+    /*carousel style*/
+    .descripcionSlider p.descripcion{
+        max-width: 220px;
+        font-size: 1.5rem;
+    }
+  
+    /*nosotros style*/
+    #quienesSomos .lead, #mision .lead, #vision .lead{ font-size: 0.9rem; }
+  
+    /*tienda style*/
+    #content img{
+        height:60vh; 
+    }
+  
+}
+
+ 
